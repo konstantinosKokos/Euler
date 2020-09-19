@@ -32,4 +32,4 @@ names = fmap sort $ (fmap . fmap) keepBody (fmap (splitOn ',') big_str)
 name_scores :: IO [Int]
 name_scores = (fmap . fmap) scoreName names
 
-result = fmap (foldr1 (+)) $ fmap (zipWith (*) [1..]]) name_scores
+result = fmap (foldr1 (+)) $ fmap (zipWith (*) [1..]) name_scores

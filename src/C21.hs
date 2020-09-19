@@ -1,5 +1,5 @@
 module C21
-  (result)
+  (result, sumProperDivisors)
   where
 
 import C3 (primeFactors)
