@@ -1,0 +1,26 @@
+name:                Euler
+version:             0.1.0.0
+github:              "konstantinosKokos/Euler"
+license:             BSD3
+author:              "Konstantinos Kogkalidis"
+maintainer:          "k.kogkalidis[at]uu.nl"
+copyright:           "2020 Konstantinos Kogkalidis"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+
+description:
+  Please see the README on GitHub at <https://github.com/konstantinosKokos/Euler#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- data-ordlist
+- sort
+- containers
+- array
+- mtl
+
+library:
+  source-dirs: src
