@@ -1,5 +1,5 @@
 module C20
-  (result)
+  (result, remove)
   where
 
 import C3 (primeFactors)
