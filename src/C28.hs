@@ -2,8 +2,6 @@ module C28
   (result)
   where
 
-import Data.Array
-
 takeEvery :: Int -> Int -> [Int] -> [Int]
 takeEvery _ _ [] = []
 takeEvery d 0 (x1:x2:xs) = takeEvery (d+2) 4 xs
