@@ -4,16 +4,16 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3d07a7aa32dc5b472204767b0c86e7bd6ab4b18f66a3b6de96c0970bc2e49862
+-- hash: 2d2e9da843f708dae99b13c033d0d2d2a9ffcd21f1c15aa05f0bf28acf952ec0
 
 name:           Euler
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/Euler#readme>
-homepage:       https://github.com/githubuser/Euler#readme
-bug-reports:    https://github.com/githubuser/Euler/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2020 Author name here
+description:    Please see the README on GitHub at <https://github.com/konstantinosKokos/Euler#readme>
+homepage:       https://github.com/konstantinosKokos/Euler#readme
+bug-reports:    https://github.com/konstantinosKokos/Euler/issues
+author:         Konstantinos Kogkalidis
+maintainer:     k.kogkalidis[at]uu.nl
+copyright:      2020 Konstantinos Kogkalidis
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -23,7 +23,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/Euler
+  location: https://github.com/konstantinosKokos/Euler
 
 library
   exposed-modules:
@@ -41,6 +41,11 @@ library
       C20
       C21
       C22
+      C23
+      C24
+      C25
+      C26
+      C27
       C3
       C4
       C5
@@ -62,14 +67,12 @@ library
     , sort
   default-language: Haskell2010
 
-test-suite Euler-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
+executable euler-exe
+  main-is: Main.hs
   other-modules:
       Paths_Euler
   hs-source-dirs:
-      test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+      app
   build-depends:
       Euler
     , array

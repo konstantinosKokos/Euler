@@ -22,5 +22,11 @@ dependencies:
 - array
 - mtl
 
+executables:
+  euler-exe:
+    main: Main.hs
+    source-dirs: app
+    dependencies: Euler
+
 library:
   source-dirs: src
