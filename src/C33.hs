@@ -17,7 +17,7 @@ curious (x,y) = case simplify (x, y) of
 div' :: (Int, Int) -> Double
 div' (x,y) = (fromIntegral x)/(fromIntegral y)
 
-simplify :: (Int,Int) -> Maybe (Int, Int)
+simplify :: (Int, Int) -> Maybe (Int, Int)
 simplify (x,y)
   | x2 == 0   = Nothing
   | x1 == y1  = Just (x2, y2)
@@ -31,7 +31,6 @@ simplify (x,y)
 
 filtered = filter curious double_digit
 (nom, den) = foldr1 (\p1 p2 -> ((fst p1 * fst p2), (snd p1 * snd p2))) filtered
-
 
 result = (foldr (*) 1 noms, foldr1 (*) dens) where
   noms = noms' \\ dens'
