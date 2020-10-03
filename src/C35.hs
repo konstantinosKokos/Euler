@@ -1,5 +1,5 @@
 module C35
-  (result)
+  (result, evaluate)
   where
 
 import C34 (get_digs)
