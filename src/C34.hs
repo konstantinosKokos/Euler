@@ -1,5 +1,5 @@
 module C34
-  (result)
+  (result, get_digs)
   where
 
 import Data.Map (fromList, (!), Map)
