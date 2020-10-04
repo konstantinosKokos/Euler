@@ -1,5 +1,5 @@
 module C38
-    (cProd, result
+    (result
     ) where
 
 import C32 (isPandigit)
@@ -16,10 +16,3 @@ cProd f left num
 result = maximum $
   map (foldl (\x y -> 10 * x + y) 0) $
   filter (isPandigit [1..9]) (map (cProd 1 9) [1..9999])
--- mult n i vs
---     | length (concat vs) >= 9 = concat vs
---     | otherwise               = mult n (i+1) (vs ++ [show (n * i)])
---
--- problem_38 :: Int
--- problem_38 = maximum . map read . filter ((['1'..'9'] ==) . sort)
---                $ [mult n 1 [] | n <- [2..9999]]
