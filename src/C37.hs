@@ -4,7 +4,7 @@ module C37
 
 import C3 (primes)
 import C27 (isPrime)
-import C34 (get_digs)
+import C34 (digits)
 import C35 (evaluate)
 import Data.List (nub)
 
@@ -15,7 +15,7 @@ isPrime' n = isPrime n
 trun :: Int -> [Int]
 trun n = map evaluate truncations
   where
-    ds          = reverse $ get_digs n
+    ds          = reverse $ digits n
     left        = map (\x -> take x ds) [1..(length ds)]
     right       = map (\x -> reverse $ take x (reverse ds)) [1..length ds]
     truncations = nub $ left ++ right

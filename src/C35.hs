@@ -2,7 +2,7 @@ module C35
   (result, evaluate)
   where
 
-import C34 (get_digs)
+import C34 (digits)
 import C3 (primes)
 import C27 (isPrime)
 import Data.List.Ordered (nub, sort, isect)
@@ -21,7 +21,7 @@ rotations :: [a] -> [[a]]
 rotations ds  = take (length ds) $ iterate rotate ds
 
 getRotations :: Int -> [Int]
-getRotations n = nub $ sort $ map evaluate (rotations $ (reverse . get_digs) n)
+getRotations n = nub $ sort $ map evaluate (rotations $ (reverse . digits) n)
 
 rotationFilter :: Int -> Bool
 rotationFilter p = all isPrime ds

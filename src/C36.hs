@@ -2,7 +2,7 @@ module C36
   (result)
   where
 
-import C34 (get_digs)
+import C34 (digits)
 
 isPalindrome :: Eq a => [a] -> Bool
 isPalindrome ds = ds == reverse ds
@@ -10,7 +10,7 @@ isPalindrome ds = ds == reverse ds
 
 isDoublePalindrome :: Int -> Bool
 isDoublePalindrome d = isPalindrome ds && isPalindrome bs
-  where ds = get_digs d
+  where ds = digits d
         bs = binarize d
 
 

@@ -1,9 +1,9 @@
 module C32
-  (result, split, trisplit, all_splits, isPandigit)
+  (result, isPandigit)
   where
 
 import Data.Char (digitToInt, intToDigit)
-import Data.List (permutations, delete, nub)
+import Data.List (permutations, delete, nub, sort)
 import Control.Monad (liftM2, liftM)
 
 
@@ -57,13 +57,8 @@ all_combos =
       (liftM2 (,) (pandigits $ (fst.fst) x) (pandigits $ (snd.fst) x)))
   all_splits
 
-isPandigit :: [Char] -> [Char] -> Bool
-isPandigit [] []    = True
-isPandigit _  []    = False
-isPandigit [] _     = False
-isPandigit (d:ds) n
-  | elem d n    = isPandigit ds (delete d n)
-  | otherwise   = False
+isPandigit :: Ord a => [a] -> [a] -> Bool
+isPandigit fs xs = fs == sort xs
 
 result = sum $ nub $map (\p -> f p) all_combos
   where

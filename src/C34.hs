@@ -1,5 +1,5 @@
 module C34
-  (result, get_digs)
+  (result, digits)
   where
 
 import Data.Map (fromList, (!), Map)
@@ -11,15 +11,15 @@ limit = sum factorials
 
 possible = takeWhile (<limit) [1..]
 
-get_digs :: Int -> [Int]
-get_digs n
+digits :: Int -> [Int]
+digits n
   | x == 0      = [y]
-  | otherwise   = y:get_digs x
+  | otherwise   = y:digits x
   where (x, y) = quotRem n 10
 
 curious :: Int -> Bool
 curious n
   | n < 3     = False
-  | otherwise = sum (map  (\x -> factorials ! x) (get_digs n)) == n
+  | otherwise = sum (map  (\x -> factorials ! x) (digits n)) == n
 
 result = sum $ filter curious possible
