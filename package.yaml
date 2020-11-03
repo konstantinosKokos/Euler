@@ -21,12 +21,7 @@ dependencies:
 - containers
 - array
 - mtl
-
-executables:
-  euler-exe:
-    main: Main.hs
-    source-dirs: app
-    dependencies: Euler
+- split
 
 library:
   source-dirs: src

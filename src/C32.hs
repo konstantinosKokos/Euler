@@ -1,5 +1,5 @@
 module C32
-  (result, isPandigit)
+  (result, isPandigit, pandigits)
   where
 
 import Data.Char (digitToInt, intToDigit)
