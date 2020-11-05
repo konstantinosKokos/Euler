@@ -4,11 +4,11 @@ module C42
     ) where
 
 import            System.IO
-import            C12 (triangles)
+import            C12                   (triangles)
 import            Data.Maybe
-import            Data.List (elemIndex)
-import            Data.Char (toLower)
-import            Data.List.Split (splitOn)
+import            Data.List             (elemIndex)
+import            Data.Char             (toLower)
+import            Data.List.Split       (splitOn)
 
 triangles' = map snd triangles
 
